@@ -14,7 +14,7 @@ class Diplomas(models.Model):
             '<img src="%s" width="75" height="75" />' % (self.diploma_img)
         )
 
-    image_tag.short_description = "Image_diplome"
+    image_tag_diploma.short_description = "Image_diplome"
 
 class Works(models.Model):
     work_name = models.CharField(max_length=200)
@@ -30,4 +30,4 @@ class Works(models.Model):
             '<img src="%s" width="75" height="75" />' % (self.work_img)
         )
 
-    image_tag.short_description = "Image_realisation"
+    image_tag_work.short_description = "Image_realisation"

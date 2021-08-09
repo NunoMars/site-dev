@@ -22,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-uf%lz0i!nuya*wzf%v3p-zg=p603zz5&jf)+i_c_po9!jl%5in'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["herokuapps.com", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -76,10 +76,16 @@ WSGI_APPLICATION = 'my_dev_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+SECRET_DATABASE_KEY = os.environ.get('SECRET_DATABASE_KEY')
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "siteDev",
+        "USER": "Nuno",
+        "PASSWORD": SECRET_DATABASE_KEY,
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
 

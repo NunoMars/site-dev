@@ -21,6 +21,8 @@ class Works(models.Model):
     work_name = models.CharField(max_length=200)
     work_img = models.ImageField(upload_to="realisations")
     work_description = models.TextField()
+    work_link_github = models.URLField(default=None)
+    work_link_production = models.URLField(blank=True)
 
     def __str__(self):
         return self.work_name

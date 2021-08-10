@@ -20,9 +20,9 @@
         {% for diploma in diplomas %}
             <div class="col-md-4">
               <div class="work-box">
-                <a href={{diploma.diploma_img}} data-gall="portfolioGallery" class="venobox">
+                <a href={{diploma.diploma_img.url}} data-gall="portfolioGallery" class="venobox">
                 <div class="work-img">
-                  <img src={{diploma.diploma_img}}  alt="" class="img-fluid">
+                  <img src={{diploma.diploma_img.url}}  alt="" class="img-fluid">
                 </div>
                 <div class="work-content">
                   <div class="row">
@@ -47,4 +47,50 @@
       </div>
     </div>
   </section><!-- End Diplomas Section -->
+{% endblock %}
+{% block works%}
+<section id="realistaions" class="portfolio-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Réalisations
+            </h3>
+            <p class="subtitle-a">
+              Différents, sites et travaux réalisés.
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        {% for work in works %}
+          <div class="col-md-4">
+            <div class="work-box">
+              <a href="assets/img/work-1.jpg" data-gall="portfolioGallery" class="venobox">
+                <div class="work-img">
+                  <img src="assets/img/work-1.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="work-content">
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <h2 class="w-title">MacGyver Scapes</h2>
+                      <div class="w-more">
+                        <span class="w-ctegory">Mini-jeu en Python</span> /<span class="w-ctegory">Disponible sur :<a href="https://github.com/NunoMars/MacGyver"><span>Git-Hub   <i class="ion-social-github"></i></span></a></span> / <span class="w-date">18 Sep. 2018</span>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="w-like">
+                        <span class="ion-ios-plus-outline"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        {% if forloop.counter|divisibleby:3 %}</div><div class="row clearfix">{% endif %}
+      {% endfor %}        
+    </section><!-- End Portfolio Section -->
 {% endblock %}

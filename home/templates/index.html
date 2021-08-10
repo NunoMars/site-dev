@@ -68,16 +68,16 @@
         {% for work in works %}
           <div class="col-md-4">
             <div class="work-box">
-              <a href="assets/img/work-1.jpg" data-gall="portfolioGallery" class="venobox">
+              <a href={{work.work_img.url}} data-gall="portfolioGallery" class="venobox">
                 <div class="work-img">
-                  <img src="assets/img/work-1.jpg" alt="" class="img-fluid">
+                  <img src={{work.work_img.url}}" alt="" class="img-fluid">
                 </div>
                 <div class="work-content">
                   <div class="row">
                     <div class="col-sm-8">
-                      <h2 class="w-title">MacGyver Scapes</h2>
+                      <h2 class="w-title">{{work.work_name }}</h2>
                       <div class="w-more">
-                        <span class="w-ctegory">Mini-jeu en Python</span> /<span class="w-ctegory">Disponible sur :<a href="https://github.com/NunoMars/MacGyver"><span>Git-Hub   <i class="ion-social-github"></i></span></a></span> / <span class="w-date">18 Sep. 2018</span>
+                        <span class="w-ctegory">{{work.work_description}}</span> /<span class="w-ctegory">Disponible sur :<a href={{worl.work_link_github}}><span>Git-Hub   <i class="ion-social-github"></i></span></a></span> / <span class="w-date">{{ work.work_date }}</span>
                       </div>
                     </div>
                     <div class="col-sm-4">

@@ -58,7 +58,7 @@
             <a class="nav-link js-scroll" href="#contact">Contacts</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="assets/img/CV.pdf">Mon CV Version PDF</a>
+            <a class="nav-link js-scroll" href={% static 'img/CV.pdf' %} >Mon CV Version PDF</a>
           </li>   
         </ul>
       </div>
@@ -265,7 +265,7 @@
                 <span class="ico-circle"><i class="ion-checkmark-round"></i></span>
               </div>
               <div class="counter-num">
-                <p class="counter">6</p>
+                <p class="counter">{{count_works}}</p>
                 <span class="counter-text">PROJETS TERMINES</span>
               </div>
             </div>
@@ -287,7 +287,7 @@
                 <span class="ico-circle"><i class="ion-ios-people"></i></span>
               </div>
               <div class="counter-num">
-                <p class="counter">20</p>
+                <p class="counter">{{count_diplomas}}</p>
                 <span class="counter-text">CERTIFICATIONS</span>
               </div>
             </div>

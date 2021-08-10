@@ -23,6 +23,7 @@ class Works(models.Model):
     work_description = models.TextField()
     work_link_github = models.URLField(default=None)
     work_link_production = models.URLField(blank=True)
+    work_date = models.CharField(blank=True, max_length=10)
 
     def __str__(self):
         return self.work_name

@@ -4,6 +4,7 @@ from django.utils.safestring import mark_safe
 class Diplomas(models.Model):
     diploma_name = models.CharField(max_length=200)
     diploma_img = models.ImageField(upload_to="diplomas")
+    diploma_category = models.CharField(max_length=100, default='Python')
 
     def __str__(self):
         return self.diploma_name

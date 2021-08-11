@@ -10,7 +10,5 @@ def index(request):
         "count_diplomas": len(diplomas),
         "count_works": len(works)
     }
-    return render(request, "index.html", args)
+    return render(request, "home/index.html", args)
 
-def contacts(request):
-    pass
